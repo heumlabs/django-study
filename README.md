@@ -8,12 +8,12 @@
 
 ## 어떤 자료로 공부하나요?
 
-- [**Two Scoops of Django 1.11 (영문판)**](https://www.twoscoopspress.com/products/two-scoops-of-django-1-11) 라는 책을 선정했습니다.
+- [**Two Scoops of Django 1.11**](https://www.twoscoopspress.com/products/two-scoops-of-django-1-11)라는 책을 선정했습니다.
 - 처음부터 끝까지 완전히 다 읽는 것을 목표로 합니다.
 
 ## 준비해야 할 것이 있나요?
 
-- [스터디 계획 Sheet]()에 따라 매주 돌아가면서 `요약 & 발표하기` / `토론 주제 or 심화 주제 발표하기` / `Blog에 후기 작성하기`를 진행합니다.
+- [스터디 계획 Sheet](https://docs.google.com/spreadsheets/d/1qmbGTTMn1VsoFC8p9O1Ovu5ZqpA8TDjhJFxHipSfXl4/edit?usp=sharing)에 따라 매주 돌아가면서 `요약 & 발표하기` / `토론 주제 or 심화 주제 발표하기` / `Blog에 후기 작성하기`를 진행합니다.
     1. `요약 & 발표하기`
         - 그 주에 진행할 Chapter를 요약 정리하여 **깔끔한** 자료로 공유합니다.
         - **전날 밤 12시**까지 이 저장소의 `chapter_<x>`폴더에 `Markdown` 파일로 저장합니다.
