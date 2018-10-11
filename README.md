@@ -1,4 +1,5 @@
 # django-study
+
 내일랩의 Django 스터디 자료 저장소입니다.  
 ([8퍼센트 두숟갈 스터디](https://github.com/8percent/tsd/wiki)의 영향을 받았습니다.)
 
@@ -13,15 +14,12 @@
 
 ## 준비해야 할 것이 있나요?
 
-- [스터디 계획 Sheet](https://docs.google.com/spreadsheets/d/1qmbGTTMn1VsoFC8p9O1Ovu5ZqpA8TDjhJFxHipSfXl4/edit?usp=sharing)에 따라 매주 돌아가면서 `요약 & 발표하기` / `토론 주제 or 심화 주제 발표하기` / `Blog에 후기 작성하기`를 진행합니다.
+- [스터디 계획 Sheet](https://docs.google.com/spreadsheets/d/1qmbGTTMn1VsoFC8p9O1Ovu5ZqpA8TDjhJFxHipSfXl4/edit?usp=sharing)에 따라 매주 돌아가면서 `요약 & 발표하기` / `토론 주제 or 심화 주제 발표하기`를 진행합니다.
     1. `요약 & 발표하기`
-        - 그 주에 진행할 Chapter를 요약 정리하여 **깔끔한** 자료로 공유합니다.
-        - **전날 밤 12시**까지 이 저장소의 `chapter_<x>`폴더에 `Markdown` 파일로 저장합니다.
+        - 그 주에 진행할 Chapter를 요약 정리하여 **깔끔한 Markdown 파일**로 작성하여 공유합니다.
+        - 스터디 시작 전까지 이 저장소의 `chapter_<x>`폴더에 `summary.md` 파일로 저장합니다.
     2. `토론 주제 or 심화 주제 발표하기`
-        - 책 내용과 관련하여 토론 거리를 선정하거나 심화 주제를 선정합니다.
-        - 나머지 멤버들이 생각할 시간을 가질 수 있도록 **최소 2일 전**까지는 주제를 공유합니다.
-    3. `Blog에 후기 작성하기`
-        - **다음 스터디 전까지** [기술 블로그](https://tech.neillab.com/)에 해당 주차의 후기를 포스팅합니다.
+        - 책 내용과 관련하여 토론 거리를 선정하거나 심화 주제를 선정하여 토론합니다.
 
 ## 언제 하나요?
 
@@ -30,7 +28,7 @@
 
 ## 어디서 하나요?
 
-- **내일랩의 중앙 공간** 혹은 **외부 Cafe**에서 진행합니다.
+- **내일랩의 5층 중앙 공간**, **4층 회의실** 혹은 **외부 Cafe**에서 진행합니다.
 
 ## 누가 참여하나요?
 
