@@ -1,7 +1,6 @@
 # 15. Django Templates와 Jinja2
 
 
-
 ## 15.1 문법적인 차이
 
 Django template language(이하 DTL)와 Jinja2는 문법적으로 매우 비슷하다. 이는 Jinja2가 DTL에서 영감을 얻었기 때문이다.  
@@ -14,8 +13,8 @@ Django를 사용할 때, DTL과 Jinja2 중 어느 하나를 선택해서 사용�
 ### 15.2.1 DTL의 장점
 
 - Django docs에 쉽고 명확하게 문서화 되어있으며, 템플릿 코드 예제들이 DTL을 사용하고 있다.
-- DTL+Django 조합이 Jinja2+Django 조합보다 훨씬 더 많이 사용되고, 더 성숙하다.
-- 대부분의 써드파티 패키지들은 DTL을 사용한다. 이를 Jinja2로 변환하느데 추가 작업이 필요하다.
+- DTL+Django 조합이 Jinja2+Django 조합보다 훨씬 더 많이 시도되었고, 더 성숙하다.
+- 대부분의 써드파티 패키지들은 DTL을 사용한다. 이를 Jinja2로 변환하는데 추가 작업이 필요하다.
 - 많은 양의 DTL code들을 Jinja2로 바꾸려면 큰 작업이 필요하다.
 
 ### 15.2.2 Jinja2의 장점
