@@ -29,7 +29,7 @@ from django.utils.text import slugify as _slugify
 @stringfilter
 def slugify(value):
     return _slugify(value)
-``` 
+```
 ```python
 # site-package/django//utils/text.py
 
@@ -83,7 +83,7 @@ def slugify(value, allow_unicode=False):
 
 ## 14.3 템플릿 태그 라이브러리 이름 짓기
 
-- 템플릿 태그 라이브러리 작명의 관례는 <app_name>_tags.py 다.
+- 템플릿 태그 라이브러리 작명의 관례는 {app_name}_tags.py 다
 - 템플릿 태그 라이브러리 이름을 앱과 똑같이 짓지 말아라.
 - 통합 개발 환경이나 텍스트 편집기에서 제공하는 템플릿 라이브러리 작명 기능에 의존하지 말아라.
 
@@ -100,9 +100,15 @@ def slugify(value, allow_unicode=False):
 
 ```python
 # 이 코드는 이용하지 말자! 악마 같은 안티 패턴이다!
+# settings/base.py
 
-from django import template
-template.add_to_builtins("flavors.templatetags.flavors_tags")
+TEMPLATES = [
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'OPTIONS': {
+        # 이 코드는 이용하지 말자! 악마 같은 안티 패턴이다!
+        'builtins': ['flavors.templatetags.flavors_tags'],
+    },
+]
 ```
 
 - 문제점은 아래와 같다
