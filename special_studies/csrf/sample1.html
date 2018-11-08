@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BLUEWIND 게시판 글 수정</title>
+<link type="text/css" rel="stylesheet" href="all.css"/>
+</head>
+<body>
+<center>
+<table border="0" width="770">
+    <tr>
+    <td width="600" valign=top>
+    <form action="board_update_reg.asp" method="POST">
+    <table align="center" width=500 border="0">
+        <tr><td colspan=2 align=center><h3>게시물 변경</h3></td></tr>
+        <tr>
+            <td bgcolor="#80e12a" align=center width=15%>
+                <font color="#495766">작성자</font>
+            </td>
+            <td width=85%>
+                <input type="text" name="user" value="test">
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#80e12a" align=center width=15%>
+                <font color="#495766">제 목</font>
+            </td>
+            <td width=85%>
+                <input type="text" name="title" value="ㅂㅈㄷ">
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#80e12a" align=center width=15%>
+                <font color="#495766">내 용</font>
+            </td>
+            <td width=85%>
+                <textarea name="contents" rows="10" cols="60">ㅂㅈㄷ</textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="idx" value="133"><br>
+    <p align="center">
+    [<a href="board_list.asp">List</a>]
+    <input type="submit" value="변경">
+    <input type="reset" value="취소">
+    </p>
+    </form>
+    </td>
+    </tr>
+    <tr>
+        <td colspan=2 height=20></td>
+    </tr>
+    <tr>
+        <td colspan=2 height=1 bgcolor=#558bc7></td>
+    </tr>
+</table>
+</br></br>
+나는 kos 입니다.
+</center>
+</body>
+</html>
