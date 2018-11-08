@@ -46,7 +46,7 @@
 ![CSRF-img-1](https://t1.daumcdn.net/cfile/tistory/2257CB44575FA44735)
 
 - 게시글 수정 페이지의 소스를 확인한다.
-[게시판 글 수정 소스코드](sample1.html)
+[게시판 글 수정 페이지의 소스코드](sample1.html)
 
 - 소스에서 원하는대로 데이터를 변경하기 위해 필요한 부분만 추려낸다.
 
