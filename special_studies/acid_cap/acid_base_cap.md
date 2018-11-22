@@ -37,7 +37,8 @@
         - 데이터가 해당 노드에 도달할 때까지는 데이터에 일관성이 없는 상태이지만 도착한 후에는 무결성을 보장 할 수 있으므로 그 상황은 일시적이다.
         - 시스템상에서 일시적으로 Consistent하지 않은 상태가 되어도 일정 시간 후에는 Consistent 상태가 되는 것을 의미한다.
 
-- ![ACID 와 BASE 비교](https://embian.files.wordpress.com/2013/06/acid-vs-base-2.png?w=525&h=138)
+- ACID 와 BASE 비교
+- ![](https://embian.files.wordpress.com/2013/06/acid-vs-base-2.png?w=525&h=138)
 
 - ACID(산) vs BASE(염기)
 
