@@ -78,6 +78,166 @@
   - [djangopackages.org]()에 추가
   - [Read the Docs](https://readthedocs.io/)를 활용하여 Sphinx 문서 호스팅
 
-## 21.10
+## 21.10 좋은 장고 패키지의 요건
 
-(다음번 스터디 때 진행)
+새로운 Django 패키지를 만들 때 사용할 수 있는 페크리스트
+
+### 21.10.1 목적
+
+- 패키지 이름이 목적을 잘 설명해야 함
+- django 관련 패키지는 'django-' 또는 'dj-'를 붙여야 함
+
+### 21.10.2 범위
+
+- 한 가지 작은 일에 집중
+- 사용자가 패키지를 쉽게 패치하거나 교체할 수 있어야 함
+
+### 21.10.3 문서화
+
+- 23장 참고
+- 필수
+- ReStructuredText로 문서 작성
+- Sphinx, public 호스팅
+- readthedocs.io
+
+### 21.10.4 테스트
+
+- 필수
+- 더 나은 품질의 PR을 얻을 수 있다
+
+### 21.10.5 양식
+
+- 기본 template 제공 (like Django)
+- css는 제외된 상태
+
+### 21.10.6 활동
+
+- 정기적 업데이트 필요
+- repo에서 코드를 업데이트되면 PyPI에 릴리스 해야함
+
+### 21.10.7 커뮤니티
+
+- 모든 기여자는 CONTRIBUTOR.rst 또는 AUTHORS.rst 파일에 표시
+- 다른 개발자의 포크 관리
+
+### 21.10.8 모듈성
+
+- django 패키시에 쉽게 플러그인 가능해야함
+- 프로젝트에 최소한으로 관여하도록 함
+
+### 21.10.9 PyPI
+
+- 반드시 PyPI에 올린다
+- 사용자가 업데이트 받기 쉬움
+
+### 21.10.10 가능한 넓은 범위의 requirements 작성
+
+```
+# DON'T DO THIS!
+# requirements for django-blarg
+Django==1.10.2
+requests==1.2.3
+```
+
+```
+# requirements for django-blarg
+Django>=1.10,<1.12
+requests>=2.6.0,<=2.13.0
+```
+
+### 21.10.11 적절한 버전 명
+
+- `A.B.C` 패턴
+  - A : Major. 대규모 변경 등
+  - B : Minor. Deprecation Notice 등
+  - C : Bugfix. Micro Release라고도 함
+- `alpha`, `beta`, `release-candidate(rc)` 접미사는 버전 뒤에 명시
+  - `Django 1.11-alpha`, `django-crispy-forms 1.6.1-beta`
+- 제발 완성되지 않은 코드를 PyPI에 업로드하지 마라
+- [PEP 386](https://www.python.org/dev/peps/pep-0386/)
+- [Sementic Versioning](https://semver.org/)
+
+### 21.10.12 이름
+
+- 이미 PyPI에 등록되어있지 않은지 확인
+- Django Package에 없는지 확인
+- 너무 이상한 이름은 사용하지 말자
+
+### 21.10.13 라이센스
+
+- 반드시 필요 (TIP 필독)
+- `LICENSE.rst` 작성
+
+### 21.10.14 코드의 명확성
+
+- 코드는 가능한 한 명확하고 단순하게
+
+### 21.10.15 URL Namespaces 이용
+
+- 섹션 8.4
+- URL Namespace를 사용해서 프로젝트 간 충돌을 방지
+
+## 21.11 쉬운 방법으로 패키지 만들기
+
+- [Cookie Cutter for Python Package](https://github.com/audreyr/cookiecutter-pypackage)
+- [Cookie Cutter for Django Package](https://github.com/pydanny/cookiecutter-djangopackage)
+
+## 21.12 오픈소스 패키지 관리하기
+
+### 21.12.1 PR(Pull Request)에 대한 보상
+
+- 누군가의 PR을 수락했다면 `CONTRIBUTORS.txt`나 `AUTHORS.txt`에 기록
+- [Django AUTHORS](https://github.com/django/django/blob/master/AUTHORS)
+
+### 21.12.2 나쁜 PR 다루기
+
+- Test 실패
+- Test Coverage 넘어감
+- PR의 변경 내용은 최대한 작게
+- (너무) 복잡한 코드
+- PEP8을 지키지 않은 코드
+- 공백 처리와 섞여있는 코드 변경 건
+
+### 21.12.3 PyPI에 정식으로 릴리스하기
+
+- 프로젝트 저장소는 품질이 보장된 곳이 아님. PyPI에 공식적으로 업로드해서 배포.
+- Twine : PyPI 업로드 시 사용되는 라이브러리
+- [나도 할 수 있다 오픈소스 - PyCon2018](https://www.slideshare.net/kanghyojun/ss-110767619)
+
+### 21.12.4 PyPI에 배포할 때 Wheel 활용
+
+- [PEP 427](https://www.python.org/dev/peps/pep-0427/)에 따르면 Wheel은 새로운 파이썬 패키지 배포 표준
+- egg 대체
+- 빠른 설치, 보안
+- pip >= 1.4, setuptools >= 0.8 부터
+
+### 21.12.5 새 버전의 Django로 업그레이드 하라
+
+- Django의 최신 버전에서 테스트 해보아야 함
+
+### 21.12.6 좋은 보안 예시 프로젝트들을 따르라
+
+- 챕터 26 참고
+- [더 좋은 링크](https://alexgaynor.net/2013/oct/19/security-process-open-source-projects/)
+  - *"보안 취약성으로 인해 사용자가 위험에 노출될 수 있다. 소프트웨어의 제작자이자 배포자인 사용자는 악용되는 것을 피할 수 있는 방법으로 보안 릴리스를 처리할 책임이 있습니다."*
+
+### 21.12.7 기본 예제 템플릿을 제공하라
+
+- 예제 템플릿을 제공하여 쉽게 테스트해볼 수 있도록 해야 함
+- [cookie cutter 예시](https://github.com/pydanny/cookiecutter-djangopackage/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/%7B%7Bcookiecutter.app_name%7D%7D/templates/%7B%7Bcookiecutter.app_name%7D%7D/base.html)
+
+### 21.12.8 Package 넘겨주기
+
+- 관리가 힘들다면 활동적인 메인테이너에게 패키지 관리권을 넘겨주기
+- 사례
+  - Ian Bicking의 "pip/virtualenv"
+  - Daniel & Audrey Roy Greenfeld의 "djangopackages.org"
+  - Daniel Roy Greenfeld의 "django-uni-form", "dj-stripe"
+  - Rob Hudson의 "django-debug-toolbar"
+
+## 21.13 더 읽어볼 것
+
+- http://djangoappschecklist.com/
+- http://alexgaynor.net/2013/sep/26/effective-code-review/
+- https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/
+- https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
