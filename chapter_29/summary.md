@@ -45,7 +45,7 @@ from core.views import IceCreamMixin
 - 반복적인 작업이나 중복되는 기능을 피하자.
 - 모델의 기능과 중복되는 유틸리티 함수를 만드는 것은 피하자.
 
-## 29.3 Django 자체에 내장된 스우스 군용 칼(맥가이버 칼)
+## 29.3 Django 자체에 내장된 스위스 군용 칼(맥가이버 칼)
 
 - Django는 유용한 헬퍼 함수를 django.utils 패키지에 내장하고 있다.
 - (주의)이 패키지의 모듈들은 django 내부적인 이용을 목적으로 제작되었으며, **버전이 변경이 되면 그 용도와 내용이 바뀐다.**
@@ -78,7 +78,6 @@ money = intcomma(value2)
 
 ### 29.3.2 django.utils.decorators.method_decorator(decorator)
 
-- function 과 method 의 차이점? [Functions & Methods (함수와 메소드)](http://yusulism.tistory.com/11)
 - 클래스의 메소드는 독립형 함수와 완전히 같지 않으므로 함수 데코레이터를 메소드에 적용 할 수는 없다.
 이 때 method_decorator 를 이용하면 함수 데코레이터를 메소드 데코레이터로 변환하여 인스턴스 메소드에서 사용할 수 있다.
 
@@ -94,6 +93,7 @@ class ProtectedView(TemplateView):
     def dispatch(self, *args, **kwargs):
         return super(ProtectedView, self).dispatch(*args, **kwargs)
 ```
+- function 과 method 의 차이점? [Functions & Methods (함수와 메소드)](http://yusulism.tistory.com/11)
 - [django 공식문서](https://docs.djangoproject.com/en/1.11/ref/utils/#module-django.utils.decorators)
 
 ### 29.3.3 django.utils.decorators.decorator_from_middleware(middleware)
